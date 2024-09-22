@@ -9,11 +9,10 @@ const Footer = () => {
         <div>
           <img className="mb-5 w-40" src={assets.logo} alt="" />
           <p className="w-full md:w-2/3 text-gray-600 leading-6">
-            Vital Care Medical Centre is committed to providing exceptional
-            healthcare services with a focus on patient care, compassion, and
-            trust. Our team of experienced doctors and specialists offer a wide
-            range of medical treatments, ensuring personalized care for every
-            individual.
+            VitalCare is committed to providing exceptional healthcare services
+            with a focus on patient care, compassion, and trust. Our team of
+            experienced doctors and specialists offer a wide range of medical
+            treatments, ensuring personalized care for every individual.
           </p>
         </div>
 
@@ -40,7 +39,7 @@ const Footer = () => {
       <div>
         <hr />
         <p className="py-5 text-sm text-center">
-          Copyright 2024 © Vital Care Medical Centre. All rights reserved.
+          Copyright 2024 © VitalCare. All rights reserved.
         </p>
       </div>
     </section>

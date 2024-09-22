@@ -7,7 +7,7 @@ const TopDoctors = () => {
   const { doctors } = useContext(AppContext);
 
   return (
-    <div className="flex flex-col items-center gap-4 my-16 text-gray-900 md:mx-10">
+    <section className="flex flex-col items-center gap-4 my-16 text-gray-900 md:mx-10">
       <h1 className="text-3xl font-medium">Top Doctors to Book</h1>
       <p className="sm:w-1/3 text-center text-sm">
         Simply click on a doctor's name to book an appointment.
@@ -16,7 +16,10 @@ const TopDoctors = () => {
         {doctors.slice(0, 10).map((item, index) => (
           <div
             key={index}
-            onClick={() => navigate(`/appointments/${item._id}`)}
+            onClick={() => {
+              navigate(`/appointments/${item._id}`);
+              scrollTo(0, 0);
+            }}
             className="border border-blue-200 rounded-xl overflow-hidden cursor-pointer hover:translate-y-[-10px] transition-all duration-500"
           >
             <img className="bg-blue-50" src={item.image} alt="" />
@@ -31,6 +34,7 @@ const TopDoctors = () => {
           </div>
         ))}
       </div>
+
       <button
         onClick={() => {
           navigate("/doctors");
@@ -40,7 +44,7 @@ const TopDoctors = () => {
       >
         more
       </button>
-    </div>
+    </section>
   );
 };
 
